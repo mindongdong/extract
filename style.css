@@ -238,7 +238,7 @@ table {
   margin: auto;
 }
 .attitude {
-  width: 10ch;
+  width: 9.8ch;
   border-right: 4px solid black;
   margin: 0 auto;
   letter-spacing: 0.15em; /* Adjust as needed */
@@ -269,6 +269,24 @@ table {
   }
 }
 
+.search-icon {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 9994;
+  opacity: 0;
+  cursor: pointer;
+  filter: invert(87%) sepia(16%) saturate(7200%) hue-rotate(359deg)
+    brightness(105%) contrast(105%);
+  transition: opacity 0.4s ease-in-out;
+}
+
+.search-icon:hover {
+  -webkit-animation: blink 0.5s ease-in-out infinite alternate;
+  -moz-animation: blink 0.5s ease-in-out infinite alternate;
+  animation: blink 0.5s ease-in-out infinite alternate;
+}
+
 .deg330 {
   -webkit-transform: rotate(315deg);
   -moz-transform: rotate(315deg);
@@ -294,4 +312,31 @@ table {
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   writing-mode: lr-tb;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
